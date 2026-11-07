@@ -1,0 +1,50 @@
+{
+  "status": "passed_with_quarantine",
+  "language_policy": "English only (language=English, language_code=en)",
+  "row_counts": {
+    "users_input": 500,
+    "users_valid": 500,
+    "users_quarantined": 0,
+    "movies_input": 5000,
+    "movies_valid": 5000,
+    "movies_quarantined": 0,
+    "interactions_input": 16005,
+    "interactions_valid": 16000,
+    "interactions_quarantined": 5
+  },
+  "missing_values": {
+    "users": {
+      "user_id": 0,
+      "age": 6,
+      "occupation": 0,
+      "preferred_genre": 0
+    },
+    "movies": {
+      "item_id": 0,
+      "title": 0,
+      "genre": 0,
+      "release_year": 0,
+      "language": 0,
+      "language_code": 0,
+      "overview": 0
+    },
+    "interactions": {
+      "interaction_id": 0,
+      "user_id": 0,
+      "item_id": 0,
+      "rating": 1,
+      "timestamp": 0
+    }
+  },
+  "quarantine_reasons": {
+    "duplicate_interaction_id": 1,
+    "invalid_timestamp": 1,
+    "missing_rating": 1,
+    "rating_out_of_range": 1,
+    "unknown_user": 1
+  },
+  "invalid_source_rows": {
+    "users": [],
+    "movies": []
+  }
+}

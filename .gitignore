@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project outputs and local environment
+.DS_Store
+reports/scheduled_run.log

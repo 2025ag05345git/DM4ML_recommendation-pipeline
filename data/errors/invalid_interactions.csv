@@ -1,0 +1,6 @@
+interaction_id,user_id,item_id,rating,timestamp,validation_errors
+i0000_000,u0000,m04741,4.0,2023-01-31T00:00:00+00:00,duplicate_interaction_id
+bad_rating,u0000,m04741,6.0,2023-01-31T00:00:00+00:00,rating_out_of_range
+bad_timestamp,u0000,m04741,4.0,not-a-date,invalid_timestamp
+unknown_user,u_missing,m04741,4.0,2023-01-31T00:00:00+00:00,unknown_user
+missing_rating,u0000,m04741,,2023-01-31T00:00:00+00:00,missing_rating

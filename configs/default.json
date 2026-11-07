@@ -1,0 +1,17 @@
+{
+  "random_seed": 42,
+  "users": 500,
+  "movies": 5000,
+  "interactions_per_user": 32,
+  "featured_movies_per_genre": 5,
+  "test_interactions_per_user": 1,
+  "top_k": 5,
+  "relevance_threshold": 4,
+  "language": "English",
+  "storage_backend": "csv",
+  "postgresql": {
+    "enabled": false,
+    "environment_variable": "DATABASE_URL",
+    "schema_file": "src/storage/postgres_schema.sql"
+  }
+}

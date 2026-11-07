@@ -1,0 +1,156 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2888 >>
+stream
+BT
+/F1 9 Tf
+48 748 Td
+12 TL
+(Movie Recommendation Data Pipeline ? Final Report) Tj
+T*
+() Tj
+T*
+(Design and data management) Tj
+T*
+() Tj
+T*
+(The project creates a deterministic, synthetic English-language movie catalog) Tj
+T*
+(of exactly 5,000 records. Every synthetic movie is labelled) Tj
+T*
+(English \(language_code=en\); titles and descriptions are generated templates,) Tj
+T*
+(not scraped real-world movie records. It also generates 500) Tj
+T*
+(synthetic user profiles and 16,000 valid ratings. Deliberately) Tj
+T*
+(malformed interaction records exercise the validation and) Tj
+T*
+(quarantine path. No external dataset is downloaded.) Tj
+T*
+() Tj
+T*
+(The modular workflow validates required fields, duplicates, types, 1?5 rating) Tj
+T*
+(bounds, timestamps, English-language catalog policy, and foreign keys.) Tj
+T*
+(Invalid interactions and source profile/movie rows are logged separately.) Tj
+T*
+(Preparation fills missing ages, normalizes fields, and holds out at least) Tj
+T*
+(1 latest event\(s\) per user; all events) Tj
+T*
+(tied at the cutoff timestamp are held out together. Training-only transformations) Tj
+T*
+(produce activity summaries, movie popularity, a user-item matrix, and reusable) Tj
+T*
+(user/movie/interaction features.) Tj
+T*
+() Tj
+T*
+(Models and evaluation) Tj
+T*
+() Tj
+T*
+(The popularity baseline ranks movies by training interaction count times mean) Tj
+T*
+(rating. The personalized content-based model learns each user's genre) Tj
+T*
+(preferences from their training ratings and recommends unseen movies in) Tj
+T*
+(preferred genres, using popularity as a tie-breaker and cold-start fallback.) Tj
+T*
+(To make the synthetic offline task testable, users rate four of the five) Tj
+T*
+(reserved movies in their preferred genre in training and the remaining one) Tj
+T*
+(is held out as a future positive event.) Tj
+T*
+(Both recommenders rank rather than predict explicit rating values, so RMSE and) Tj
+T*
+(MAE do not apply. Ratings >= 4 in the holdout) Tj
+T*
+(are relevant; K=5. All test users contribute to the averaged ranking) Tj
+T*
+(metrics. Results from this reproducible run:) Tj
+T*
+() Tj
+T*
+(Model | Precision@5 | Recall@5 | NDCG@5 | Coverage | Diversity) Tj
+T*
+(popularity | 0.014 | 0.072 | 0.040 | 0.001 | 0.976) Tj
+T*
+(content_based_genre | 0.200 | 1.000 | 1.000 | 0.039 | 0.000) Tj
+T*
+() Tj
+T*
+(Orchestration, tracking, and limitations) Tj
+T*
+() Tj
+T*
+(dags/workflow.py runs the dependency-checked stages; dags/run_daily.sh) Tj
+T*
+(supports cron scheduling. The JSON run record tracks configuration, metrics,) Tj
+T*
+(and artifact paths without a tracking server. CSV is the active storage) Tj
+T*
+(backend. PostgreSQL schema and adapter placeholders are included for a later) Tj
+T*
+(migration; no database connection or persistence is attempted by this run.) Tj
+T*
+() Tj
+T*
+(The controlled synthetic preferences make this suitable for testing data) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 354 >>
+stream
+BT
+/F1 9 Tf
+48 748 Td
+12 TL
+(management, not estimating real recommendation quality. The content model) Tj
+T*
+(uses genre only; cold-start quality, real-world bias, privacy, production) Tj
+T*
+(serving, and repeated temporal evaluation remain outside this assignment) Tj
+T*
+(baseline. A future study should evaluate on a licensed public dataset.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000003193 00000 n 
+0000003319 00000 n 
+0000003724 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3794
+%%EOF

@@ -1,0 +1,3 @@
+model,precision_at_5,recall_at_5,ndcg_at_5,coverage,diversity,evaluated_users
+popularity,0.0144,0.0720,0.0400,0.0014,0.9760,500.0000
+content_based_genre,0.2000,1.0000,1.0000,0.0390,0.0000,500.0000
