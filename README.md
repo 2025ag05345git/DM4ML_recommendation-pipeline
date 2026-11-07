@@ -172,27 +172,6 @@ default generates exactly 5,000 movie rows and each user's valid event count
 must exceed the configured holdout count. Tied timestamps can make the actual
 holdout larger.
 
-## PostgreSQL migration placeholder
-
-CSV files are the only active storage backend. Future database work is
-isolated behind:
-
-- `src/storage/postgres_schema.sql` — proposed users, movies, interactions,
-  and feature table DDL with keys and indexes.
-- `src/storage/postgres.py` — explicit adapter boundary that fails clearly
-  rather than silently pretending to connect.
-- `.env.example` — documents a future `DATABASE_URL`; copy to `.env` onlygit add .
-git status
-git diff --cached --statgit status
-git diffgit status
-git diff
-  when implementing the adapter. `.env` is ignored by Git.
-- `configs/default.json` — `storage_backend: "csv"` and a disabled
-  PostgreSQL configuration placeholder.
-
-No PostgreSQL package, credentials, connection, or writes are required today.
-Before enabling it, implement transactions/upserts, configure migrations and
-secrets safely, then add integration tests against a local test database.
 
 ## Repository
 
