@@ -5,9 +5,7 @@
 
 ## Project description
 
-A reproducible data-management and recommendation project for
-the DM4ML Assignment-2. 
-It creates a **synthetic catalog of exactly 5,000 English-language movies**, synthetic users and ratings, validates and quarantines bad records, builds reusable features, trains two recommenders, compares top-K ranking metrics, and records the run artifacts.
+A reproducible data-management and recommendation project It creates a **synthetic catalog of exactly 5,000 English-language movies**, synthetic users and ratings, validates and quarantines bad records, builds reusable features, trains two recommenders, compares top-K ranking metrics, and records the run artifacts.
 
 > **Synthetic data notice:** The 5,000 movie rows are generated metadata with
 > templated English titles and descriptions; they are not 5,000 real films or
